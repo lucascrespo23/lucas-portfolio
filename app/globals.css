@@ -17,6 +17,30 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  position: relative;
+  background-color: #F5F1EA;
+  background-image: url('/paper-texture.svg');
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(210, 200, 180, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 30%, rgba(195, 185, 165, 0.1) 0%, transparent 60%);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 ::selection {
   background: #1a1a1a;
   color: var(--color-bg);
@@ -85,7 +109,8 @@ a:hover {
   gap: 0.35rem;
   padding: 1.25rem;
   border-radius: 12px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
   border: 1px solid var(--color-border, #E8E4DD);
   text-decoration: none;
   transition: border-color 0.2s, box-shadow 0.2s;
