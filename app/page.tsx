@@ -80,18 +80,28 @@ export default function Home() {
       </Section>
 
       <Section title="Writing">
-        <ul className="space-y-2">
-          <li>
-            <a href="https://every.to/p/the-internet-used-to-be-fun">
-              The Internet Used to Be Fun
-            </a>{" "}
-            <span className="text-[var(--color-muted)]">— Every.to</span>
-          </li>
-          <li>
-            <a href="https://every.to/source-code">Compound Engineering</a>{" "}
-            <span className="text-[var(--color-muted)]">— Every.to</span>
-          </li>
-        </ul>
+        <div className="writing-bento">
+          <a href="https://every.to/p/the-internet-used-to-be-fun" className="bento-card bento-wide">
+            <span className="bento-tag">Every.to</span>
+            <span className="bento-title">The Internet Used to Be Fun</span>
+            <span className="bento-desc">On sameness, nostalgia, and why the web lost its texture.</span>
+          </a>
+          <a href="https://every.to/source-code" className="bento-card">
+            <span className="bento-tag">Every.to</span>
+            <span className="bento-title">Compound Engineering</span>
+            <span className="bento-desc">Building products with AI from scratch.</span>
+          </a>
+          <a href="https://every.to/p/the-cost-of-marketing" className="bento-card">
+            <span className="bento-tag">Essay</span>
+            <span className="bento-title">The Cost of Marketing</span>
+            <span className="bento-desc">Why creativity is the last unfair advantage.</span>
+          </a>
+          <a href="https://every.to/p/ai-and-the-future-of-design" className="bento-card bento-wide">
+            <span className="bento-tag">Every.to</span>
+            <span className="bento-title">AI and the Future of Design</span>
+            <span className="bento-desc">Taste over execution — what happens when tools can do everything.</span>
+          </a>
+        </div>
       </Section>
 
       <Section title="Interests">
