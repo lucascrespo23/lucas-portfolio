@@ -112,24 +112,59 @@ export default function Home() {
   );
 }
 
-const brands = [
+const row1 = [
   { name: "AT&T", domain: "att.com" },
   { name: "Goldman Sachs", domain: "goldmansachs.com" },
   { name: "ExxonMobil", domain: "exxonmobil.com" },
+  { name: "Ford", domain: "ford.com" },
+  { name: "Samsung", domain: "samsung.com" },
   { name: "Dove", domain: "dove.com" },
+  { name: "Sprint", domain: "sprint.com" },
+  { name: "Verizon", domain: "verizon.com" },
+  { name: "Google", domain: "google.com" },
+  { name: "YouTube", domain: "youtube.com" },
+];
+
+const row2 = [
   { name: "Kim Crawford", domain: "kimcrawfordwines.com" },
   { name: "Coors Light", domain: "coorslight.com" },
   { name: "Pedigree", domain: "pedigree.com" },
-  { name: "Ford", domain: "ford.com" },
-  { name: "Samsung", domain: "samsung.com" },
   { name: "Jess Beauty", domain: "jessbeauty.com" },
+  { name: "Hábito Drinks", domain: "habitodrinks.com" },
+  { name: "Arte Nómada", domain: "artenomada.com" },
+  { name: "US Open", domain: "usopen.org" },
+  { name: "Formula One", domain: "formula1.com" },
+];
+
+const row3 = [
+  { name: "BBDO", domain: "bbdo.com" },
+  { name: "VML", domain: "vml.com" },
+  { name: "Every", domain: "every.to" },
+  { name: "Delphi", domain: "delphidreams.xyz" },
+  { name: "The Movement", domain: "jointhemovement.vip" },
+  { name: "Basedash", domain: "basedash.com" },
+  { name: "Substack", domain: "substack.com" },
+  { name: "Stripe", domain: "stripe.com" },
 ];
 
 function LogoMarquee() {
+  return (
+    <div className="space-y-3">
+      <MarqueeRow brands={row1} duration="30s" />
+      <MarqueeRow brands={row2} duration="35s" reverse />
+      <MarqueeRow brands={row3} duration="28s" />
+    </div>
+  );
+}
+
+function MarqueeRow({ brands, duration, reverse }: { brands: { name: string; domain: string }[]; duration: string; reverse?: boolean }) {
   const logos = [...brands, ...brands];
   return (
     <div className="marquee-container overflow-hidden">
-      <div className="marquee-track">
+      <div
+        className={`marquee-track ${reverse ? "marquee-reverse" : ""}`}
+        style={{ animationDuration: duration }}
+      >
         {logos.map((b, i) => (
           <img
             key={i}

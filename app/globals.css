@@ -48,6 +48,10 @@ a:hover {
   animation: marquee-scroll 30s linear infinite;
 }
 
+.marquee-reverse {
+  animation-name: marquee-scroll-reverse;
+}
+
 .marquee-logo {
   height: 44px;
   width: auto;
@@ -66,4 +70,9 @@ a:hover {
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
