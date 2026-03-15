@@ -47,10 +47,7 @@ export default function Home() {
       </Section>
 
       <Section title="Worked with">
-        <p className="text-[var(--color-muted)]">
-          AT&T · Goldman Sachs · ExxonMobil · Dove · Kim Crawford · Coors
-          Light · Pedigree · Ford · Samsung · Jess Beauty
-        </p>
+        <LogoMarquee />
       </Section>
 
       <Section title="Selected Work">
@@ -112,6 +109,38 @@ export default function Home() {
         <a href="mailto:hello@veryvisual.design">Email</a>
       </footer>
     </main>
+  );
+}
+
+const brands = [
+  { name: "AT&T", domain: "att.com" },
+  { name: "Goldman Sachs", domain: "goldmansachs.com" },
+  { name: "ExxonMobil", domain: "exxonmobil.com" },
+  { name: "Dove", domain: "dove.com" },
+  { name: "Kim Crawford", domain: "kimcrawfordwines.com" },
+  { name: "Coors Light", domain: "coorslight.com" },
+  { name: "Pedigree", domain: "pedigree.com" },
+  { name: "Ford", domain: "ford.com" },
+  { name: "Samsung", domain: "samsung.com" },
+  { name: "Jess Beauty", domain: "jessbeauty.com" },
+];
+
+function LogoMarquee() {
+  const logos = [...brands, ...brands];
+  return (
+    <div className="marquee-container overflow-hidden">
+      <div className="marquee-track">
+        {logos.map((b, i) => (
+          <img
+            key={i}
+            src={`https://logo.clearbit.com/${b.domain}`}
+            alt={b.name}
+            className="marquee-logo"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 
