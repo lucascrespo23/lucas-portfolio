@@ -20,12 +20,21 @@ html {
 body {
   position: relative;
   background-color: #F5F1EA;
-  background-image: url('/paper-texture.svg');
-  background-size: 300px 300px;
-  background-repeat: repeat;
 }
 
 body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('/paper-texture.svg');
+  background-size: 210px 210px;
+  background-repeat: repeat;
+  opacity: 0.6;
+}
+
+body::after {
   content: '';
   position: fixed;
   inset: 0;
