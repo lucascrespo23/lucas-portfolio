@@ -110,7 +110,7 @@ a:hover {
 /* Footer image */
 .footer-image {
   position: fixed;
-  bottom: -50%;
+  bottom: -20%;
   left: 0;
   width: 100vw;
   z-index: 10;
