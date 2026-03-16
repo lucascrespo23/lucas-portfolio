@@ -54,7 +54,7 @@ body > * {
 .main-content {
   position: relative;
   z-index: 2;
-  padding-bottom: 45vh;
+  padding-bottom: 0;
 }
 
 ::selection {
@@ -113,6 +113,7 @@ a:hover {
   width: 100vw;
   z-index: 1;
   line-height: 0;
+  margin-top: -2rem;
 }
 
 .footer-image img {
