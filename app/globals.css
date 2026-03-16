@@ -101,6 +101,22 @@ a:hover {
   opacity: 1;
 }
 
+/* Footer image */
+.footer-image {
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  line-height: 0;
+}
+
+.footer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-100% / 3)); }

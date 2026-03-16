@@ -113,12 +113,15 @@ export default function Home() {
         </ul>
       </Section>
 
-      <footer className="pt-16 flex gap-6 text-sm">
-        <a href="https://x.com/lucascrespo">X</a>
+      <footer className="pt-16 flex gap-6 text-sm pb-8">
+        <a href="https://x.com/lucas__crespo">X</a>
         <a href="https://linkedin.com/in/lucascrespo">LinkedIn</a>
         <a href="mailto:hello@veryvisual.design">Email</a>
       </footer>
     </main>
+    <div className="footer-image">
+      <img src="/footer-trees.jpg" alt="" />
+    </div>
   );
 }
 
