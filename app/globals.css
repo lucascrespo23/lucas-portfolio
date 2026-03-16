@@ -31,7 +31,7 @@ body::before {
   background-image: url('/paper-texture.svg');
   background-size: 210px 210px;
   background-repeat: repeat;
-  opacity: 0.6;
+  opacity: 0.25;
 }
 
 body::after {
