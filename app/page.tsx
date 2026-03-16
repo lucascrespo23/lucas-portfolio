@@ -121,7 +121,7 @@ export default function Home() {
       </footer>
     </main>
     <div className="footer-image">
-      <img src="/footer-trees.jpg" alt="" />
+      <img src="/footer-trees.png" alt="" />
     </div>
     </>
   );
