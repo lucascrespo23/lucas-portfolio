@@ -168,14 +168,13 @@ function LogoMarquee() {
 }
 
 function MarqueeRow({ brands, duration, reverse }: { brands: { name: string; domain: string }[]; duration: string; reverse?: boolean }) {
-  const logos = [...brands, ...brands];
   return (
     <div className="marquee-container overflow-hidden">
       <div
         className={`marquee-track ${reverse ? "marquee-reverse" : ""}`}
         style={{ animationDuration: duration }}
       >
-        {logos.map((b, i) => (
+        {[...brands, ...brands, ...brands].map((b, i) => (
           <img
             key={i}
             src={`https://logo.clearbit.com/${b.domain}`}
