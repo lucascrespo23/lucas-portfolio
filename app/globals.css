@@ -51,6 +51,12 @@ body > * {
   z-index: 1;
 }
 
+.main-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 45vh;
+}
+
 ::selection {
   background: #1a1a1a;
   color: var(--color-bg);
@@ -103,11 +109,14 @@ a:hover {
 
 /* Footer image */
 .footer-image {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100vw;
-  position: relative;
-  z-index: 1;
+  z-index: 0;
   mix-blend-mode: multiply;
   line-height: 0;
+  pointer-events: none;
 }
 
 .footer-image img {

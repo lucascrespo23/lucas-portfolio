@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-    <main className="max-w-xl mx-auto px-6 py-20 md:py-32 text-[15px] leading-relaxed text-[var(--color-text)]">
+    <main className="main-content max-w-xl mx-auto px-6 py-20 md:py-32 text-[15px] leading-relaxed text-[var(--color-text)]">
       <header className="mb-20">
         <h1 className="text-2xl font-medium mb-4">Lucas Crespo</h1>
         <p className="text-[var(--color-muted)]">
