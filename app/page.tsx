@@ -140,7 +140,7 @@ const row2 = [
 ];
 
 const row3 = [
-  "Frame 1597881368.png", "Frame 1597881369.png", "Frame 1597881370.png",
+  "Frame 1597881368.png", "Frame 1597881370.png",
   "Frame 1597881371.png", "Frame 1597881372.png", "Frame 1597881373.png",
   "Frame 1597881374.png", "Frame 1597881375.png",
 ];
