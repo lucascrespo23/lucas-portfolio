@@ -96,9 +96,9 @@ a:hover {
   height: 44px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(1.2);
   mix-blend-mode: multiply;
-  opacity: 0.6;
+  opacity: 1;
 
   flex-shrink: 0;
 }
