@@ -128,27 +128,27 @@ export default function Home() {
 }
 
 const row1 = [
-  "Frame 1597881365.png", "Frame 1597881369.png", "Frame 1597881370.png",
-  "Frame 1597881372.png", "Frame 1597881354.png", "Frame 1597881377.png",
-  "Frame 1597881378.png", "Frame 1597881375.png",
+  "Frame 1597881352.png", "Frame 1597881353.png", "Frame 1597881354.png",
+  "Frame 1597881355.png", "Frame 1597881356.png", "Frame 1597881357.png",
+  "Frame 1597881358.png", "Frame 1597881359.png",
 ];
 
 const row2 = [
-  "Frame 1597881366.png", "Frame 1597881371.png", "Frame 1597881358.png",
-  "Frame 1597881373.png", "Frame 1597881381.png", "Frame 1597881356.png",
-  "Frame 1597881364.png",
+  "Frame 1597881360.png", "Frame 1597881361.png", "Frame 1597881362.png",
+  "Frame 1597881363.png", "Frame 1597881364.png", "Frame 1597881365.png",
+  "Frame 1597881366.png",
 ];
 
 const row3 = [
-  "Frame 1597881360.png", "Frame 1597881355.png", "Frame 1597881368.png",
-  "Frame 1597881363.png", "Frame 1597881357.png", "Frame 1597881359.png",
-  "Frame 1597881352.png", "Frame 1597881362.png",
+  "Frame 1597881368.png", "Frame 1597881369.png", "Frame 1597881370.png",
+  "Frame 1597881371.png", "Frame 1597881372.png", "Frame 1597881373.png",
+  "Frame 1597881374.png", "Frame 1597881375.png",
 ];
 
 const row4 = [
-  "Frame 1597881382.png", "Frame 1597881353.png", "Frame 1597881376.png",
-  "Frame 1597881379.png", "Frame 1597881374.png", "Frame 1597881380.png",
-  "Frame 1597881361.png",
+  "Frame 1597881376.png", "Frame 1597881377.png", "Frame 1597881378.png",
+  "Frame 1597881379.png", "Frame 1597881380.png", "Frame 1597881381.png",
+  "Frame 1597881382.png",
 ];
 
 function LogoMarquee() {
