@@ -128,62 +128,49 @@ export default function Home() {
 }
 
 const row1 = [
-  { name: "AT&T", domain: "att.com" },
-  { name: "Goldman Sachs", domain: "goldmansachs.com" },
-  { name: "ExxonMobil", domain: "exxonmobil.com" },
-  { name: "Ford", domain: "ford.com" },
-  { name: "Samsung", domain: "samsung.com" },
-  { name: "Dove", domain: "dove.com" },
-  { name: "Sprint", domain: "sprint.com" },
-  { name: "Verizon", domain: "verizon.com" },
-  { name: "Google", domain: "google.com" },
-  { name: "YouTube", domain: "youtube.com" },
+  "Frame 1597881365.png", "Frame 1597881369.png", "Frame 1597881370.png",
+  "Frame 1597881372.png", "Frame 1597881354.png", "Frame 1597881377.png",
+  "Frame 1597881378.png", "Frame 1597881375.png", "Frame 1597881366.png",
+  "Frame 1597881371.png",
 ];
 
 const row2 = [
-  { name: "Kim Crawford", domain: "kimcrawfordwines.com" },
-  { name: "Coors Light", domain: "coorslight.com" },
-  { name: "Pedigree", domain: "pedigree.com" },
-  { name: "Jess Beauty", domain: "jessbeauty.com" },
-  { name: "Hábito Drinks", domain: "habitodrinks.com" },
-  { name: "Arte Nómada", domain: "artenomada.com" },
-  { name: "US Open", domain: "usopen.org" },
-  { name: "Formula One", domain: "formula1.com" },
+  "Frame 1597881358.png", "Frame 1597881373.png", "Frame 1597881381.png",
+  "Frame 1597881356.png", "Frame 1597881364.png", "Frame 1597881360.png",
+  "Frame 1597881355.png", "Frame 1597881368.png", "Frame 1597881363.png",
+  "Frame 1597881357.png",
 ];
 
 const row3 = [
-  { name: "BBDO", domain: "bbdo.com" },
-  { name: "VML", domain: "vml.com" },
-  { name: "Every", domain: "every.to" },
-  { name: "Delphi", domain: "delphidreams.xyz" },
-  { name: "The Movement", domain: "jointhemovement.vip" },
-  { name: "Basedash", domain: "basedash.com" },
-  { name: "Substack", domain: "substack.com" },
-  { name: "Stripe", domain: "stripe.com" },
+  "Frame 1597881359.png", "Frame 1597881352.png", "Frame 1597881362.png",
+  "Frame 1597881382.png", "Frame 1597881353.png", "Frame 1597881376.png",
+  "Frame 1597881379.png", "Frame 1597881374.png", "Frame 1597881380.png",
+  "Frame 1597881361.png",
 ];
 
 function LogoMarquee() {
   return (
     <div className="space-y-3">
-      <MarqueeRow brands={row1} duration="30s" />
-      <MarqueeRow brands={row2} duration="35s" reverse />
-      <MarqueeRow brands={row3} duration="28s" />
+      <MarqueeRow logos={row1} duration="30s" />
+      <MarqueeRow logos={row2} duration="35s" reverse />
+      <MarqueeRow logos={row3} duration="28s" />
     </div>
   );
 }
 
-function MarqueeRow({ brands, duration, reverse }: { brands: { name: string; domain: string }[]; duration: string; reverse?: boolean }) {
+function MarqueeRow({ logos, duration, reverse }: { logos: string[]; duration: string; reverse?: boolean }) {
+  const tripled = [...logos, ...logos, ...logos];
   return (
     <div className="marquee-container overflow-hidden">
       <div
         className={`marquee-track ${reverse ? "marquee-reverse" : ""}`}
         style={{ animationDuration: duration }}
       >
-        {[...brands, ...brands, ...brands].map((b, i) => (
+        {tripled.map((file, i) => (
           <img
             key={i}
-            src={`https://logo.clearbit.com/${b.domain}`}
-            alt={b.name}
+            src={`/logos/${file}`}
+            alt=""
             className="marquee-logo"
             loading="lazy"
           />
